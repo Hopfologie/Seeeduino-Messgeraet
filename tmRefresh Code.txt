@@ -1,0 +1,159 @@
+//sync settings to overview
+vaPackets.val=0
+vaTime.val=0
+if(btSF7_1.val==1)
+{
+  vaPackets.val=nSF7_p1.val
+  temp.val=nSF7_t1.val*nSF7_p1.val
+  vaTime.val+=temp.val
+  vis nSF7_p1,1
+  vis nSF7_t1,1
+}else
+{
+  vis nSF7_p1,0
+  vis nSF7_t1,0
+}
+if(btSF8_1.val==1)
+{
+  vaPackets.val+=nSF8_p1.val
+  temp.val=nSF8_t1.val*nSF8_p1.val
+  vaTime.val+=temp.val
+  vis nSF8_p1,1
+  vis nSF8_t1,1
+}else
+{
+  vis nSF8_p1,0
+  vis nSF8_t1,0
+}
+if(btSF9_1.val==1)
+{
+  vaPackets.val+=nSF9_p1.val
+  temp.val=nSF9_t1.val*nSF9_p1.val
+  vaTime.val+=temp.val
+  vis nSF9_p1,1
+  vis nSF9_t1,1
+}else
+{
+  vis nSF9_p1,0
+  vis nSF9_t1,0
+}
+if(btSF10_1.val==1)
+{
+  vaPackets.val+=nSF10_p1.val
+  temp.val=nSF10_t1.val*nSF10_p1.val
+  vaTime.val+=temp.val
+  vis nSF10_p1,1
+  vis nSF10_t1,1
+}else
+{
+  vis nSF10_p1,0
+  vis nSF10_t1,0
+}
+if(btSF11_1.val==1)
+{
+  vaPackets.val+=nSF11_p1.val
+  temp.val=nSF11_t1.val*nSF11_p1.val
+  vaTime.val+=temp.val
+  vis nSF11_p1,1
+  vis nSF11_t1,1
+}else
+{
+  vis nSF11_p1,0
+  vis nSF11_t1,0
+}
+if(btSF12_1.val==1)
+{
+  vaPackets.val+=nSF12_p1.val
+  temp.val=nSF12_t1.val*nSF12_p1.val
+  vaTime.val+=temp.val
+  vis nSF12_p1,1
+  vis nSF12_t1,1
+}else
+{
+  vis nSF12_p1,0
+  vis nSF12_t1,0
+}
+if(btSF7_2.val==1)
+{
+  vaPackets.val+=nSF7_p2.val
+  temp.val=nSF7_t2.val*nSF7_p2.val
+  vaTime.val+=temp.val
+  vis nSF7_p2,1
+  vis nSF7_t2,1
+}else
+{
+  vis nSF7_p2,0
+  vis nSF7_t2,0
+}
+if(btSF8_2.val==1)
+{
+  vaPackets.val+=nSF8_p2.val
+  temp.val=nSF8_t2.val*nSF8_p2.val
+  vaTime.val+=temp.val
+  vis nSF8_p2,1
+  vis nSF8_t2,1
+}else
+{
+  vis nSF8_p2,0
+  vis nSF8_t2,0
+}
+if(btSF9_2.val==1)
+{
+  vaPackets.val+=nSF9_p2.val
+  temp.val=nSF9_t2.val*nSF9_p2.val
+  vaTime.val+=temp.val
+  vis nSF9_p2,1
+  vis nSF9_t2,1
+}else
+{
+  vis nSF9_p2,0
+  vis nSF9_t2,0
+}
+if(btSF10_2.val==1)
+{
+  vaPackets.val+=nSF10_p2.val
+  temp.val=nSF10_t2.val*nSF10_p2.val
+  vaTime.val+=temp.val
+  vis nSF10_p2,1
+  vis nSF10_t2,1
+}else
+{
+  vis nSF10_p2,0
+  vis nSF10_t2,0
+}
+if(btSF11_2.val==1)
+{
+  vaPackets.val+=nSF11_p2.val
+  temp.val=nSF11_t2.val*nSF11_p2.val
+  vaTime.val+=temp.val
+  vis nSF11_p2,1
+  vis nSF11_t2,1
+}else
+{
+  vis nSF11_p2,0
+  vis nSF11_t2,0
+}
+if(btSF12_2.val==1)
+{
+  vaPackets.val+=nSF12_p2.val
+  temp.val=nSF12_t2.val*nSF12_p2.val
+  vaTime.val+=temp.val
+  vis nSF12_p2,1
+  vis nSF12_t2,1
+}else
+{
+  vis nSF12_p2,0
+  vis nSF12_t2,0
+}
+//sync to components
+nP_total.val=vaPackets.val
+
+vaMinutes.val=vaTime.val
+vaSeconds.val=vaTime.val
+
+vaMinutes.val/=60
+vaSeconds.val%=60
+covx vaSeconds.val,tT_estSec.txt,0,0
+covx vaMinutes.val,tT_estMin.txt,0,0
+
+
